@@ -110,6 +110,7 @@ h2 {
   border-radius: 0.5rem;
   padding: 2rem;
   box-shadow: 0 10px 30px -10px var(--colour-neutral-300);
+  background-color: white;
 }
 
 .card img {

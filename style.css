@@ -1,4 +1,6 @@
-/* || RESET */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&ampdisplay=swap");
+
+/* || RESET */ /* CHANGE PIXEL WIDTHS TO REM */
 
 *,
 *::after,
@@ -10,4 +12,153 @@
 
 img {
   max-width: 100%;
+}
+
+/* || VARIABLES */
+
+:root {
+  font-size: 15px;
+
+  /* Colours */
+  --colour-primary-red: hsl(0, 78%, 62%);
+  --colour-primary-green: hsl(180, 62%, 55%);
+  --colour-primary-yellow: hsl(34, 97%, 64%);
+  --colour-primary-blue: hsl(212, 86%, 64%);
+  --colour-neutral-100: hsl(0, 0%, 98%);
+  --colour-neutral-300: hsl(229, 6%, 66%);
+  --colour-neutral-600: hsl(234, 12%, 34%);
+
+  /* Typography */
+  --ff-body: "Poppins", sans-serif;
+  --fw-light: 200;
+  --fw-reg: 400;
+  --fw-bold: 600;
+}
+
+/* || GENERAL STYLES */
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-reg);
+  line-height: 1.6;
+  color: var(--colour-neutral-300);
+  background-color: var(--colour-neutral-100);
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+main {
+  max-width: 100rem;
+  margin-inline: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+}
+
+h1,
+h2,
+.eyebrow {
+  font-weight: var(--fw-bold);
+  font-size: 1.6rem;
+  color: var(--colour-neutral-600);
+  line-height: 1.4;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+/* || UTILITY */
+
+.intro {
+  text-align: center;
+  margin-inline: auto;
+  margin-block: 4rem;
+  max-width: 40rem;
+}
+
+.eyebrow {
+  display: block;
+  font-weight: var(--fw-light);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px var(--colour-neutral-300);
+}
+
+.card img {
+  flex-grow: 1;
+  align-self: end;
+  width: 5rem;
+  height: auto;
+  margin-top: 2.5rem;
+}
+
+.card-green {
+  border-top: 5px solid var(--colour-primary-green);
+}
+
+.card-blue {
+  border-top: 5px solid var(--colour-primary-blue);
+}
+
+.card-red {
+  border-top: 5px solid var(--colour-primary-red);
+}
+
+.card-yellow {
+  border-top: 5px solid var(--colour-primary-yellow);
+}
+
+/* || MEDIA QUERIES */
+
+@media (min-width: 55rem) {
+  main {
+    margin-top: 0;
+  }
+
+  h1,
+  .eyebrow {
+    font-size: 2.4rem;
+  }
+
+  h1 {
+    margin-bottom: 0.6em;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 85rem) {
+  .cards {
+    flex-direction: row;
+  }
 }
